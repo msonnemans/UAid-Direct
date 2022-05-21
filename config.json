@@ -1,17 +1,11 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://uaid-direct.netlify.app/",
+  "site_title": "UAid Direct",
+  "site_description": "UAid Direct",
   "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
-    }
+    "Ukraine",
+    "Charity",
+    "Aid"
   ],
   "posts_per_page": 5,
   "twitter_account": "@my-account",
