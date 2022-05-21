@@ -3,9 +3,9 @@
   "site_title": "UAid Direct",
   "site_description": "UAid Direct",
   "site_keywords": [
-    "Ukraine",
-    "Charity",
-    "Aid"
+    {"keyword": "Ukraine"},
+    {"keyword": "Charity"},
+    {"keyword": "Aid"}
   ],
   "posts_per_page": 5,
   "twitter_account": "@my-account",
