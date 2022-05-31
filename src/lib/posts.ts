@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import path from "path";
 import yaml from "js-yaml";
 
-const postsDirectory = path.join(process.cwd(), "content/posts");
+const postsDirectory = path.join(process.cwd(), "content/missions");
 
 export type PostContent = {
   readonly date: string;
@@ -11,6 +11,8 @@ export type PostContent = {
   readonly slug: string;
   readonly tags?: string[];
   readonly fullPath: string;
+  readonly image: string;
+  readonly location: string;
 };
 
 let postCache: PostContent[];
@@ -40,6 +42,8 @@ export function fetchPostContent(): PostContent[] {
         tags: string[];
         slug: string;
         fullPath: string,
+        location: string;
+        image: string;
       };
       matterData.fullPath = fullPath;
 

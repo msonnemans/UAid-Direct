@@ -21,6 +21,8 @@ export type Props = {
   author: string;
   description?: string;
   source: MdxRemote.Source;
+  image: string;
+  location: string;
 };
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
@@ -38,6 +40,8 @@ export default function Post({
   author,
   description = "",
   source,
+  image,
+  location
 }: Props) {
   const content = hydrate(source, { components })
   return (
@@ -48,6 +52,8 @@ export default function Post({
       tags={tags}
       author={author}
       description={description}
+      image={image}
+      location={location}
     >
       {content}
     </PostLayout>
@@ -55,7 +61,7 @@ export default function Post({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = fetchPostContent().map(it => "/posts/" + it.slug);
+  const paths = fetchPostContent().map(it => "/missions/" + it.slug);
   return {
     paths,
     fallback: false,
@@ -77,7 +83,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       description: "",
       tags: data.tags,
       author: data.author,
-      source: mdxSource
+      source: mdxSource,
+      location: data.location,
+      image: data.image
     },
   };
 };

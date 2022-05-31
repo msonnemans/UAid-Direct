@@ -21,6 +21,8 @@ type Props = {
   author: string;
   description?: string;
   children: React.ReactNode;
+  image: string;
+  location: string;
 };
 export default function PostLayout({
   title,
@@ -30,6 +32,8 @@ export default function PostLayout({
   tags,
   description = "",
   children,
+  image,
+  location
 }: Props) {
   const keywords = tags.map(it => getTag(it).name);
   const authorName = getAuthor(author).name;
@@ -59,33 +63,42 @@ export default function PostLayout({
         author={authorName}
         description={description}
       />
-      <div className={"container"}>
+      <nav className="top-bar">
+        <a href='/'><img src="/images/logo.jpeg"/></a>
+        <a href='/'>Home</a>
+      </nav>
+      <div className={"container"}>     
         <article>
           <header>
+            <div className="image" style={{maxWidth: '100%'}}>
+              <img src={`/images/` + image} style={{maxWidth: '100%'}}/>
+            </div>
             <h1>{title}</h1>
             <div className={"metadata"}>
               <div>
                 <Date date={date} />
               </div>
               <div>
-                <Author author={getAuthor(author)} />
+               <span>{location}</span>
               </div>
             </div>
           </header>
           <div className={styles.content}>{children}</div>
-          <ul className={"tag-list"}>
+          {/* <ul className={"tag-list"}>
             {tags.map((it, i) => (
               <li key={i}>
                 <TagButton tag={getTag(it)} />
               </li>
             ))}
-          </ul>
+          </ul> */}
         </article>
-        <footer>
-          <div className={"social-list"}>
-            <SocialList />
+        <footer className="wrapper style1 align-center">
+          <div className="inner">
+            <ul className="icons">
+              <li><a href="https://www.facebook.com/UAid.Direct/" target="_blank" className="icon brands style2 fa-facebook-f"><span className="label">Facebook</span></a></li>
+              <li><a href="https://www.instagram.com/uaid.direct/" className="icon brands style2 fa-instagram" target="_blank"><span className="label">Instagram</span></a></li>
+            </ul>
           </div>
-          <Copyright />
         </footer>
       </div>
       <style jsx>

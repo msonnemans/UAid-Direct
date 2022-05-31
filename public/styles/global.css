@@ -8601,3 +8601,24 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+
+.top-bar {
+	height: 100px;
+	padding: 0 32px;
+	display: flex;
+	max-width: 100vw;
+	align-items: center;
+}
+
+.top-bar img {
+	max-height: 70px;
+}
+
+.top-bar a:last-child {
+	margin-left: auto;
+}
+
+.top-bar a {
+	text-decoration: none;
+}
