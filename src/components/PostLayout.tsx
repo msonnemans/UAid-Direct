@@ -75,9 +75,9 @@ export default function PostLayout({
             </div>
             <h1>{title}</h1>
             <div className={"metadata"}>
-              <div>
+              {/* <div>
                 <Date date={date} />
-              </div>
+              </div> */}
               <div>
                <span>{location}</span>
               </div>

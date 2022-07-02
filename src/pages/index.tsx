@@ -7,12 +7,19 @@ import { GetStaticProps } from "next";
 import config from "../lib/config";
 import { countPosts, listPostContent, PostContent } from "../lib/posts";
 import { listTags, TagContent } from "../lib/tags";
+import run from '../main'
+import { useEffect } from 'react'
 
 type Props = {
 	posts: PostContent[];
 };
 
 export default function Index({ posts }: Props) {
+
+	useEffect(() => {
+		run()
+	}, [])
+
   return (
     <Layout>
       <BasicMeta url={"/"} />
