@@ -8624,7 +8624,7 @@ input, select, textarea {
 }
 
 .gallery.style2 article {
-	height: 350px;
+	height: max(20vw, 200px);
 }
 
 .gallery.style2 article .image {
