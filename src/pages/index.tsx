@@ -28,7 +28,7 @@ export default function Index({ posts }: Props) {
 	  <nav className="top-bar">
         <a href='/'><img src="/images/logo.jpeg"/></a>
         <a href='/'>Home</a>
-		<a href='/other/apply'>Як подати заявку на допомогу</a>
+		<a href='/Dopomohu'>Як подати заявку на допомогу</a>
       </nav>
 			<div id="wrapper" className="divided">
 

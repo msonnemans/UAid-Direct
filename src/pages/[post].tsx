@@ -3,11 +3,11 @@ import renderToString from "next-mdx-remote/render-to-string";
 import { MdxRemote } from "next-mdx-remote/types";
 import hydrate from "next-mdx-remote/hydrate";
 import matter from "gray-matter";
-import { fetchOtherContent } from "../../lib/posts";
+import { fetchOtherContent } from "../lib/posts";
 import fs from "fs";
 import yaml from "js-yaml";
 import { parseISO } from 'date-fns';
-import PostLayout from "../../components/PostLayout";
+import PostLayout from "../components/PostLayout";
 
 import InstagramEmbed from "react-instagram-embed";
 import YouTube from "react-youtube";
@@ -61,7 +61,7 @@ export default function Post({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = fetchOtherContent().map(it => "/other/" + it.slug);
+  const paths = fetchOtherContent().map(it => "/" + it.slug);
   return {
     paths,
     fallback: false,

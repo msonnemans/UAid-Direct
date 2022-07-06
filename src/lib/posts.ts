@@ -4,7 +4,7 @@ import path from "path";
 import yaml from "js-yaml";
 
 const postsDirectory = path.join(process.cwd(), "content/missions");
-const otherDirectory = path.join(process.cwd(), "content/other");
+const otherDirectory = path.join(process.cwd(), "content");
 
 export type PostContent = {
   readonly date: string;
