@@ -148,7 +148,7 @@ export default function Index({ posts }: Props) {
 							<h3>PayPal</h3>
 							<a href="https://www.paypal.com/paypalme/TAFUKRA?locale.x=en_AT">TAFUKRA - Team Alberto For UKRAine</a>
 							<p>Specify <b>"UAid Direct"</b> with the donation</p>
-							<img src="images/paypalb.jpg" style={{maxHeight: 800}}/>
+							<img src="images/paypalb.jpg" style={{maxHeight: 800, maxWidth: '80vw'}}/>
 						</div>
 					</section>	
 
