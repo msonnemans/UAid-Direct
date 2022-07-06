@@ -28,13 +28,14 @@ export default function Index({ posts }: Props) {
 	  <nav className="top-bar">
         <a href='/'><img src="/images/logo.jpeg"/></a>
         <a href='/'>Home</a>
+		<a href='/other/apply'>Як подати заявку на допомогу</a>
       </nav>
 			<div id="wrapper" className="divided">
 
 					<section className="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div className="content">
 							<h1>UAid Direct</h1>
-							<p className="major">We bring direct help to those in Ukraine who do not have a choice in war</p>
+							<p className="major">To provide direct help to those in Ukraine affected by the war</p>
 							<ul className="actions stacked">
 								<li><a href="#donations" className="button big wide smooth-scroll-middle">Help us now</a></li>
 							</ul>
@@ -76,7 +77,7 @@ export default function Index({ posts }: Props) {
 					<section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div className="content">
 							<h2>About us</h2>
-							<p>UAid Direct is a volunteer led group of like-minded individuals. As per our mission, we have determined a niche where we can be most effective. Some of our group have experience all over the world with various crisis situations, others have gained invaluable expertise and knowhow since the start of the war. </p>
+							<p>UAid Direct is a volunteer led group of like-minded individuals. As per our mission, we have determined a niche where we can be most effective. Some of our group have experience all over the world with various crisis situations, others have gained invaluable expertise and knowhow since the start of the war. UAid Direct has no religious affiliation.</p>
 							{/* <ul className="actions stacked">
 								<li><a href="#" className="button">Learn More</a></li>
 							</ul> */}

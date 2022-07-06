@@ -4,6 +4,7 @@ import path from "path";
 import yaml from "js-yaml";
 
 const postsDirectory = path.join(process.cwd(), "content/missions");
+const otherDirectory = path.join(process.cwd(), "content/other");
 
 export type PostContent = {
   readonly date: string;
@@ -16,6 +17,7 @@ export type PostContent = {
 };
 
 let postCache: PostContent[];
+let otherCache: PostContent[];
 
 export function fetchPostContent(): PostContent[] {
   if (postCache) {
@@ -67,6 +69,58 @@ export function fetchPostContent(): PostContent[] {
     }
   });
   return postCache;
+}
+
+export function fetchOtherContent(): PostContent[] {
+  if (otherCache) {
+    return otherCache;
+  }
+  // Get file names under /posts
+  const fileNames = fs.readdirSync(otherDirectory);
+  const allPostsData = fileNames
+    .filter((it) => it.endsWith(".mdx"))
+    .map((fileName) => {
+      // Read markdown file as string
+      const fullPath = path.join(otherDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+
+      // Use gray-matter to parse the post metadata section
+      const matterResult = matter(fileContents, {
+        engines: {
+          yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object,
+        },
+      });
+      const matterData = matterResult.data as {
+        date: string;
+        title: string;
+        tags: string[];
+        slug: string;
+        fullPath: string,
+        location: string;
+        image: string;
+      };
+      matterData.fullPath = fullPath;
+
+      const slug = fileName.replace(/\.mdx$/, "");
+
+      // Validate slug string
+      if (matterData.slug !== slug) {
+        throw new Error(
+          "slug field not match with the path of its content source"
+        );
+      }
+
+      return matterData;
+    });
+  // Sort posts by date
+  otherCache = allPostsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return otherCache;
 }
 
 export function countPosts(tag?: string): number {

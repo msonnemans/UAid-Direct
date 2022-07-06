@@ -8615,12 +8615,14 @@ input, select, textarea {
 	max-height: 70px;
 }
 
-.top-bar a:last-child {
-	margin-left: auto;
+.top-bar a:first-child {
+	margin-right: auto;
+	margin-left: 0;
 }
 
 .top-bar a {
 	text-decoration: none;
+	margin-left: 1em;
 }
 
 .gallery.style2 article {

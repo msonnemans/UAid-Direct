@@ -40,23 +40,23 @@ export default function PostLayout({
   return (
     <Layout>
       <BasicMeta
-        url={`/posts/${slug}`}
+        url={`/missions/${slug}`}
         title={title}
         keywords={keywords}
         description={description}
       />
       <TwitterCardMeta
-        url={`/posts/${slug}`}
+        url={`/missions/${slug}`}
         title={title}
         description={description}
       />
       <OpenGraphMeta
-        url={`/posts/${slug}`}
+        url={`/missions/${slug}`}
         title={title}
         description={description}
       />
       <JsonLdMeta
-        url={`/posts/${slug}`}
+        url={`/missions/${slug}`}
         title={title}
         keywords={keywords}
         date={date}
@@ -66,6 +66,7 @@ export default function PostLayout({
       <nav className="top-bar">
         <a href='/'><img src="/images/logo.jpeg"/></a>
         <a href='/'>Home</a>
+        <a href='/other/apply'>Як подати заявку на допомогу</a>
       </nav>
       <div className={"container"}>     
         <article>
