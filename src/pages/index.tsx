@@ -137,7 +137,8 @@ export default function Index({ posts }: Props) {
 					<section className="wrapper style1 align-center" id="donations">
 						<div className="inner">
 							<h2>Financial donations</h2>
-							<h3>Money transfer</h3>
+							<p>Please email <a href="mailto:Uaid.direct@gmail.com">Uaid.direct@gmail.com</a> for donation opportunities</p>
+							{/* <h3>Money transfer</h3>
 							<ul style={{listStyle: 'none'}}>
 								<li>Account name: ELISABETTA CAPANNELLI</li>
 								<li>IBAN: AT57 2011 1844 2544 4102</li>
@@ -148,7 +149,7 @@ export default function Index({ posts }: Props) {
 							<h3>PayPal</h3>
 							<a href="https://www.paypal.com/paypalme/TAFUKRA?locale.x=en_AT">TAFUKRA - Team Alberto For UKRAine</a>
 							<p>Specify <b>"UAid Direct"</b> with the donation</p>
-							<img src="images/paypalb.jpg" style={{maxHeight: 800, maxWidth: '80vw'}}/>
+							<img src="images/paypalb.jpg" style={{maxHeight: 800, maxWidth: '80vw'}}/> */}
 						</div>
 					</section>	
 
