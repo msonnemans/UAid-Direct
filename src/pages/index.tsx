@@ -137,17 +137,17 @@ export default function Index({ posts }: Props) {
 					<section className="wrapper style1 align-center" id="donations">
 						<div className="inner">
 							<h2>Financial donations</h2>
-							<p>Please email <a href="mailto:Uaid.direct@gmail.com">Uaid.direct@gmail.com</a> for donation opportunities</p>
+							{/* <p>Please email <a href="mailto:Uaid.direct@gmail.com">Uaid.direct@gmail.com</a> for donation opportunities</p>
 							<h3>Money transfer</h3>
 							<ul style={{listStyle: 'none'}}>
 								<li>Account beneficiary: Konrad Malinowski</li>
 								<li>IBAN: GB11 REVO 0099 7043 0265 56</li>
 								<li>BIC/SWIFT: REVOGB21</li>
 								<li>Reference: <b>UAid Direct</b></li>
-							</ul>
-							<p>Please let us know when you have transferred money so we can properly thank you.</p>
+							</ul> */}
+							{/* <p>Please let us know when you have transferred money so we can properly thank you.</p> */}
 							<h3>PayPal</h3>
-							<a href="https://www.paypal.com/pools/c/8LOFh3NMUa">Uaid Direct - Konrad Malinowski</a>
+							<a href="https://www.paypal.com/pools/c/8LOFh3NMUa">UAid Direct</a>
 						</div>
 					</section>	
 
