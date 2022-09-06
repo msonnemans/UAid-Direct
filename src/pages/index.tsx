@@ -26,7 +26,7 @@ export default function Index({ posts }: Props) {
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
 	  <nav className="top-bar">
-        <a href='/'><img src="/logo.jpeg"/></a>
+        <a href='/'><img src="/logo.jpg"/></a>
         <a href='/'>Home</a>
 		<a href='/Dopomohu'>Як подати заявку на допомогу</a>
       </nav>
