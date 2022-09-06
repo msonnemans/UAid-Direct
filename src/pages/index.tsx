@@ -26,7 +26,7 @@ export default function Index({ posts }: Props) {
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
 	  <nav className="top-bar">
-        <a href='/'><img src="/images/logo.jpeg"/></a>
+        <a href='/'><img src="/logo.jpeg"/></a>
         <a href='/'>Home</a>
 		<a href='/Dopomohu'>Як подати заявку на допомогу</a>
       </nav>
@@ -147,7 +147,7 @@ export default function Index({ posts }: Props) {
 							</ul> */}
 							{/* <p>Please let us know when you have transferred money so we can properly thank you.</p> */}
 							<h3>PayPal</h3>
-							<a href="https://www.paypal.com/pools/c/8LOFh3NMUa">UAid Direct</a>
+							<a href="https://www.paypal.com/pools/c/8MNh80ovJG">UAid Direct</a>
 						</div>
 					</section>	
 

@@ -64,7 +64,7 @@ export default function PostLayout({
         description={description}
       />
       <nav className="top-bar">
-        <a href='/'><img src="/images/logo.jpeg"/></a>
+        <a href='/'><img src="/logo.jpeg"/></a>
         <a href='/'>Home</a>
         <a href='/Dopomohu'>Як подати заявку на допомогу</a>
       </nav>
