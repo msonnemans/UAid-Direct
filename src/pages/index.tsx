@@ -146,8 +146,8 @@ export default function Index({ posts }: Props) {
 								<li>Reference: <b>UAid Direct</b></li>
 							</ul> */}
 							{/* <p>Please let us know when you have transferred money so we can properly thank you.</p> */}
-							<h3>PayPal</h3>
-							<a href="https://www.paypal.com/pools/c/8MNh80ovJG">UAid Direct</a>
+							<h3>GoFundMe</h3>
+							<a href="https://gofund.me/05186f58">UAid Direct</a>
 						</div>
 					</section>	
 
