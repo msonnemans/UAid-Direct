@@ -10,7 +10,6 @@ import { listTags, TagContent } from "../lib/tags";
 import run from "../main";
 import { useEffect } from "react";
 import Link from "next/dist/client/link";
-import Donation from "../components/donation";
 
 type Props = {
   posts: PostContent[];
@@ -202,7 +201,12 @@ export default function Index({ posts }: Props) {
               </li>
             </ul>
           </div>
-          <Donation />
+          <div>
+            <div
+              className="gfm-embed"
+              data-url="https://www.gofundme.com/f/uaid-direct-humanitarian-relief-for-ukraine/widget/large/"
+            ></div>
+          </div>
         </section>
         {/* <section className="wrapper style1 align-center" id="donations">
           <div className="inner">
