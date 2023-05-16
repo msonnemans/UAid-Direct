@@ -9,6 +9,8 @@ import { countPosts, listPostContent, PostContent } from "../lib/posts";
 import { listTags, TagContent } from "../lib/tags";
 import run from "../main";
 import { useEffect } from "react";
+import Link from "next/dist/client/link";
+import Donation from "../components/donation";
 
 type Props = {
   posts: PostContent[];
@@ -25,12 +27,15 @@ export default function Index({ posts }: Props) {
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
       <nav className="top-bar">
-        <a href="/">
-          <img src="/logo.jpg" />
-        </a>
-        <a href="/">Home</a>
-        <a href="/help">Help</a>
-        <a href="/Dopomohu">Як подати заявку на допомогу</a>
+        <Link href="/">
+          <a>
+            <img src="/logo.jpg" />
+          </a>
+        </Link>
+        <Link href="/">Home</Link>
+        <Link href="/help">Help</Link>
+        <Link href="/donate">Donate</Link>
+        <Link href="/Dopomohu">Як подати заявку на допомогу</Link>
       </nav>
       <div id="wrapper" className="divided">
         <section className="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
@@ -39,13 +44,9 @@ export default function Index({ posts }: Props) {
             <p className="major">To provide direct help to those in Ukraine affected by the war</p>
             <ul className="actions">
               <li>
-                <a
-                  href="https://gofund.me/05186f58"
-                  target="_blank"
-                  className="button primary-button big wide smooth-scroll-middle"
-                >
-                  Help us now
-                </a>
+                <Link href="/donate">
+                  <a className="button primary-button big wide smooth-scroll-middle">Donate</a>
+                </Link>
               </li>
               <li>
                 <a href="/help" className="button big wide smooth-scroll-middle">
@@ -190,13 +191,9 @@ export default function Index({ posts }: Props) {
             </div>
             <ul style={{ display: "flex", justifyContent: "center", listStyle: "none" }}>
               <li style={{ padding: 0 }}>
-                <a
-                  href="https://gofund.me/05186f58"
-                  target="_blank"
-                  className="button primary-button big wide smooth-scroll-middle"
-                >
-                  Donate now
-                </a>
+                <Link href="/donate">
+                  <a className="button primary-button big wide smooth-scroll-middle">Donate</a>
+                </Link>
               </li>
               <li>
                 <a href="/help" className="button big wide smooth-scroll-middle">
@@ -205,23 +202,24 @@ export default function Index({ posts }: Props) {
               </li>
             </ul>
           </div>
+          <Donation />
         </section>
-        <section className="wrapper style1 align-center" id="donations">
+        {/* <section className="wrapper style1 align-center" id="donations">
           <div className="inner">
             <h2>Financial donations</h2>
-            {/* <p>Please email <a href="mailto:Uaid.direct@gmail.com">Uaid.direct@gmail.com</a> for donation opportunities</p>
+            <p>Please email <a href="mailto:Uaid.direct@gmail.com">Uaid.direct@gmail.com</a> for donation opportunities</p>
 							<h3>Money transfer</h3>
 							<ul style={{listStyle: 'none'}}>
 								<li>Account beneficiary: Konrad Malinowski</li>
 								<li>IBAN: GB11 REVO 0099 7043 0265 56</li>
 								<li>BIC/SWIFT: REVOGB21</li>
 								<li>Reference: <b>UAid Direct</b></li>
-							</ul> */}
-            {/* <p>Please let us know when you have transferred money so we can properly thank you.</p> */}
+							</ul>
+            <p>Please let us know when you have transferred money so we can properly thank you.</p>
             <h3>GoFundMe</h3>
             <a href="https://gofund.me/05186f58">UAid Direct</a>
           </div>
-        </section>
+        </section> */}
 
         <footer className="wrapper style1 align-center">
           <div className="inner">

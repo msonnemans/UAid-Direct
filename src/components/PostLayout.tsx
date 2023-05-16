@@ -12,6 +12,7 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
+import Link from "next/dist/client/link";
 
 type Props = {
   title: string;
@@ -51,12 +52,15 @@ export default function PostLayout({
         description={description}
       />
       <nav className="top-bar">
-        <a href="/">
-          <img src="/logo.jpg" />
-        </a>
-        <a href="/">Home</a>
-        <a href="/help">Help</a>
-        <a href="/Dopomohu">Як подати заявку на допомогу</a>
+        <Link href="/">
+          <a>
+            <img src="/logo.jpg" />
+          </a>
+        </Link>
+        <Link href="/">Home</Link>
+        <Link href="/help">Help</Link>
+        <Link href="/donate">Donate</Link>
+        <Link href="/Dopomohu">Як подати заявку на допомогу</Link>
       </nav>
       <div className={"container"}>
         <article>

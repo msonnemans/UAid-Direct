@@ -2148,6 +2148,15 @@ input, select, textarea {
 			padding: 0 2em;
 		}
 
+		button.tiny,
+		.button.tiny {
+			font-size: 0.6rem;
+			height: 2em;
+			line-height: 2em;
+			border-radius: 1.5em;
+			padding: 0 1.5em;
+		}
+
 		input[type="submit"].large,
 		input[type="reset"].large,
 		input[type="button"].large,
@@ -8656,4 +8665,8 @@ input, select, textarea {
 
 ul {
 	list-style-image: url('../../public/images/flag.png');
+}
+
+.ml-20 {
+	margin-left: 20px;
 }
